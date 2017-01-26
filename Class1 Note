@@ -1,0 +1,7 @@
+git useful command
+
+git pull https://github.com/aholub/unex.git
+
+git add .
+git commit -m "Add Homework"
+git push origin master
