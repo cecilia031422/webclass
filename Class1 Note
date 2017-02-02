@@ -1,7 +1,29 @@
-git useful command
+//git useful command
+
+git clone https://github.com/aholub/unex
+
+git status
+
+git pull
 
 git pull https://github.com/aholub/unex.git
+
+ls //list all the directories in the folder
+
 
 git add .
 git commit -m "Add Homework"
 git push origin master
+
+
+
+
+
+//GIT HUB AVOID OVERWRITING when pulling!!!
+
+That’s a pretty advanced topic, but the basic idea is that you and your friend would be working in separate “branches” (on separate versions of the same code). These branches would remain distinct until you decide to “merge” them. (You could be committing to your branch, for example, with no conflicts). When you do finally merge, git will show you all of the places where the two versions conflict so that you can work out which of the conflicting versions you want to keep. You can do that on a line-per-line basis inside the files, and tools like SourceTree will show you both versions side by side with the conflicting lines highlighted. To avoid these sorts of “merge conflicts” you want to be merging the branches as often as possible (typically once an hour at minimum).  When you finish the “merge” operation, you will have effectively pulled the merged version.
+
+Working on the same branch with two different files is discouraged because you’ll get absolutely no help from Git when you try to reconcile the differences. (edited)
+
+[7:56]  
+Of course, if you really want to work collaboratively, the best solution is to literally work collaboratively. Both of you should be working at the same computer (Agile folks call this “pair programming”).  There are also collaborative editors (Google Docs is a primitive example) that let two people work in the same file simultaneously.
