@@ -26,32 +26,27 @@ header, address{
 		border-radius: 50%;
 		float: right;
 	}
+	nav li {
+		padding: 5%;
+		display: inline;
+	}
 }
 
 /*for cell-phone:*/
-	.position {
+.position {
 	border-radius: 50%;
 	display: block;
 	margin: auto;
-	}
+}
 
 nav {
 	font-size: 130%;
 	text-align: center;
-	text-decoration: none;
-	margin: 0;
 }
 
 nav ul {
-	text-decoration: none;
 	list-style-type: none;
 	padding: 0;
-}
-
-nav li {
-	padding: 40px;
-	display: inline;
-	text-decoration: none;
 }
 
 nav ul a:link {
@@ -71,7 +66,6 @@ article {
 }
 
 ul {
-	text-decoration: none;
 	list-style-image: url("bullet point.png");
 }
 
