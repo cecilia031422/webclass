@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Purchase page</title>
+	<link type="text/css" rel="stylesheet" href="styles.css">
+	<meta content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Purchase Page">
+	<meta name="author" content="Cecilia Zhang">
+
+
+<script type="text/javascript">
+
+var order = {
+	"customerInfo" : {"name" : "Cecilia Zhang",
+						"email" : "hello@gmail.com",
+						"phone": 1234567,
+						"address": "1234 Hello St."},
+	"lineItems" : [{"name": "one", "qty": 1, "desc": "Black Coffee","price": 10},
+					{"name": "two", "qty": 2,"desc": "Green Tea","price": 15},
+					{"name":"three","qty": 3,"desc": "Apple Juice","price": 20}]
+}
+
+var deletedOrder = [];
+
+window.onload = function() {
+	displayOrder();
+
+}
+
+function displayOrder(){
+	var total = 0;
+	for (var i = 0; i < order.lineItems.length; i++ ) {
+		document.getElementById("orderInfo").innerHTML 
+			+= "<p id=item" + i + ">" 
+				+ "Item description: " + order.lineItems[i]["desc"] + " , "
+				+ "Unit price: $" + order.lineItems[i]["price"] + " , " 
+				+ "Quantity: " + order.lineItems[i]["qty"]
+				+ " <input type=\"button\" class=\"del\" value=\"Delete\" onclick=\"delItem(this.id)\" id = "+ i +">"
+				+ "<br>" + "</p>";
+
+		var total = total + parseFloat(order.lineItems[i]["price"]) * parseFloat(order.lineItems[i]["qty"]);
+	}
+
+	var totalTaxShip = total * 1.1 + 5;
+	document.getElementById("orderTotal").innerHTML = "Total price: $" + totalTaxShip.toFixed(2) + "<br><sub>including 10% tax and $5 shipping fee</sub>";
+
+	document.getElementById("customerInfo").innerHTML 
+		= "Customer name: " + order.customerInfo.name + "<br>"
+			+ "Email address: " + order.customerInfo.email + "<br>" 
+			+ "Phone number: " + order.customerInfo.phone + "<br>" 
+			+ "Address: " + order.customerInfo.address;	
+}
+
+function delItem(clicked_id){	
+	deletedOrder.push(order.lineItems[clicked_id]);
+
+	delete order.lineItems[clicked_id];
+	var deletedElm = document.getElementById(clicked_id);
+	deletedElm.parentNode.removeChild(deletedElm);
+	var deletedElm2 = document.getElementById("item"+ clicked_id);
+	deletedElm2.parentNode.removeChild(deletedElm2);
+
+	var total = 0;
+	for (var i = 0; i < order.lineItems.length; i++ ) {
+		if (order.lineItems[i] !== undefined) {
+			var total = total + parseFloat(order.lineItems[i]["price"]) * parseFloat(order.lineItems[i]["qty"]);
+		}
+	}
+
+	if (order.lineItems.every(x => x == undefined)) {
+		document.getElementById("orderTotal").innerHTML = "No items in the order. Total: $" + 0;
+	}
+	else {
+		var totalTaxShip = total * 1.1 + 5;
+		document.getElementById("orderTotal").innerHTML = "Total price: $" + totalTaxShip.toFixed(2) + "<br><sub>including 10% tax and $5 shipping fee</sub>";
+	}
+}
+
+function deletedItems(){
+	alert(JSON.stringify(deletedOrder));
+}
+
+</script>
+</head>
+
+<body>
+<h1>Your Order Summary</h1>
+<div id="orderInfo"></div>
+<h3 id="orderTotal" class="position"></h3>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h3>Shipping information</h3>
+<p id="customerInfo"></p>
+<br>
+
+<footer>
+	<h3>Payment information<h3>
+	Card number: <input type="number" name="cardNO">
+		<br>Expiration date: <input type="date" name="expDate">
+<br>
+<br>
+<button type="submit" onclick="deletedItems()">Submit</button>
+<footer>
+
+</body>
+</html>
+

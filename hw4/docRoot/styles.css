@@ -1,0 +1,31 @@
+/*set the font size for the whole html from google fonts-Ek Mukta*/
+@import url('https://fonts.googleapis.com/css?family=Ek+Mukta');
+* {
+	font-family: 'Ek Mukta', sans-serif !important;
+}
+
+h1, div, h3, p {
+	margin-left: 5%;
+	margin-right: 5%;
+
+}
+
+.position {
+	float: right;
+}
+
+button {
+	border-radius: 8px;
+	background-color: #e7e7e7;
+	font-size: 20px;
+}
+
+input.del {
+	border-radius: 8px;
+	background-color: #e7e7e7;
+	font-size: 12px;
+	float: right;
+
+}
+
+
