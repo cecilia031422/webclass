@@ -23,9 +23,9 @@ var order = {
 
 var deletedOrder = [];
 
+
 window.onload = function() {
 	displayOrder();
-
 }
 
 function displayOrder(){
@@ -78,7 +78,7 @@ function delItem(clicked_id){
 }
 
 function deletedItems(){
-	alert(JSON.stringify(deletedOrder));
+	alert("Deleted items: " + JSON.stringify(deletedOrder));
 }
 
 </script>
