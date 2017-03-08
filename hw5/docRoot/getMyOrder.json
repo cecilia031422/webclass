@@ -1,0 +1,18 @@
+{
+"customerInfo" : {"name" : "Cecilia Zhang",
+						"email" : "hello@gmail.com",
+						"phone": 1234567,
+						"address": "1234 Hello St."
+				},
+"lineItems" : [
+		{"qty": 1, 
+		"product": {"desc":"Black coffee", "price": 10}
+		},
+		{"qty": 3, 
+		"product": {"desc":"Green tea", "price": 10}
+		},
+		{"qty": 5, 
+		"product": {"desc":"Apple juice", "price": 10}
+		}
+	]
+}

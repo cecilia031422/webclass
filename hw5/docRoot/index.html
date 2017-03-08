@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Purchase page</title>
+	<link type="text/css" rel="stylesheet" href="styles.css">
+	<meta content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Purchase Page">
+	<meta name="author" content="Cecilia Zhang">
+
+
+<script type="text/javascript">
+
+window.onload = function() {
+	getMyOrder();
+};
+
+
+function get( url ) {
+	return new Promise(function (resolve,reject){
+		var req = new XMLHttpRequest();
+		req.open( "GET", url , true );
+		req.send();
+
+		req.onload = function() {
+			resolve( req.response );
+		}
+		req.onerror = function () {
+			reject( Error("What went wrong") );
+		}	
+	});
+};
+
+function getMyOrder(){
+	get ("http://localhost/getMyOrder.json").then (
+		function(response){
+			orderObj = JSON.parse(response);
+			fDisplayOrder();
+			getCustomerInfo();
+		},
+
+		function(error){
+			console.log("Failed" + error.message);
+		}
+	);
+};
+
+var displayOrder = [
+	new OrderInfo ("item1"),
+	new OrderInfo ("item2"),
+	new OrderInfo ("item3")
+];
+
+function OrderInfo (itemName) {
+	this.name = itemName;
+	this.orderStr = function(){
+		para = document.createElement("P");
+		t = document.createTextNode (this.name + ": Item description: " + orderObj.lineItems[i].product["desc"] + " , "
+		 		+ "Unit price: $" + orderObj.lineItems[i].product["price"] + " , " 
+		 		+ "Quantity: " + orderObj.lineItems[i].qty + " ");
+		btn = document.createElement("BUTTON");
+		btn.innerHTML = "delete";
+
+		para.appendChild(t);
+		para.appendChild(btn);
+		document.getElementById("item").appendChild(para);
+	};
+
+	this.changeQuantity = function(num){
+		//btn, para, called successfully, all 6 elements
+		console.log(btn);
+		console.log(para);
+		
+		//inside the click function, when click the delete button 1, the showing btn and para is the third one.
+		btn.addEventListener("click",function myFunction(){
+		 	console.log(btn);
+			console.log(para);
+
+			para.style.color = "grey";
+    		orderObj.lineItems[i].qty = num;
+    	});
+	};
+
+	this.addQuantityToTotal = function(total){
+		total = total + 1.1 * (parseFloat(orderObj.lineItems[i].product["price"])) * (parseFloat(orderObj.lineItems[i].qty));
+		return total;
+	};
+	
+};
+
+function fDisplayOrder(){
+	var total = 0;
+	for (i = 0; i < displayOrder.length; i++) {
+		displayOrder[i].orderStr();
+		
+		displayOrder[i].changeQuantity(0);
+
+		total = displayOrder[i].addQuantityToTotal(total);
+	}
+	total = (total + 5).toFixed(2);
+	document.getElementById("orderTotal").innerHTML = "Total price: $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>"
+
+};
+
+function getCustomerInfo(){
+	document.getElementById("customerInfo").innerHTML 
+		= "Customer name: " + orderObj.customerInfo.name + "<br>"
+			+ "Email address: " + orderObj.customerInfo.email + "<br>" 
+			+ "Phone number: " + orderObj.customerInfo.phone + "<br>" 
+			+ "Address: " + orderObj.customerInfo.address;	
+}
+
+</script>
+
+</head>
+
+<body>
+<h1>Your Order Summary</h1>
+<div id="item"></div>
+
+<h3 id="orderTotal" class="position"></h3>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h3>Shipping information</h3>
+<p id="customerInfo"></p>
+<br>
+
+<footer>
+	<h3>Payment information<h3>
+	Card number: <input type="number" name="cardNO">
+		<br>Expiration date: <input type="date" name="expDate">
+<br>
+<br>
+<button type="submit" onclick="deletedItems()">Submit</button>
+<footer>
+
+</body>
+</html>
