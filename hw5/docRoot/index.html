@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 <head>
 	<title>Purchase page</title>
@@ -9,13 +8,10 @@
 	<meta name="description" content="Purchase Page">
 	<meta name="author" content="Cecilia Zhang">
 
-
 <script type="text/javascript">
-
 window.onload = function() {
 	getMyOrder();
 };
-
 
 function get( url ) {
 	return new Promise(function (resolve,reject){
@@ -33,7 +29,7 @@ function get( url ) {
 };
 
 function getMyOrder(){
-	get ("http://localhost/getMyOrder.json").then (
+	get ("http://localhost/getOrder.json").then (
 		function(response){
 			orderObj = JSON.parse(response);
 			fDisplayOrder();
@@ -47,60 +43,61 @@ function getMyOrder(){
 };
 
 var displayOrder = [
-	new OrderInfo ("item1"),
-	new OrderInfo ("item2"),
-	new OrderInfo ("item3")
+	new OrderInfo (0),
+	new OrderInfo (1),
+	new OrderInfo (2)
 ];
 
-function OrderInfo (itemName) {
-	this.name = itemName;
-	this.orderStr = function(){
-		para = document.createElement("P");
-		t = document.createTextNode (this.name + ": Item description: " + orderObj.lineItems[i].product["desc"] + " , "
-		 		+ "Unit price: $" + orderObj.lineItems[i].product["price"] + " , " 
-		 		+ "Quantity: " + orderObj.lineItems[i].qty + " ");
-		btn = document.createElement("BUTTON");
-		btn.innerHTML = "delete";
 
-		para.appendChild(t);
-		para.appendChild(btn);
-		document.getElementById("item").appendChild(para);
-	};
+function OrderInfo (itemID) {
+	this.id = itemID;
+	this.getHTML = function(){
+		document.getElementById("item").innerHTML += ("<p id=item" + this.id + ">" 
+				+ "Item description: " + orderObj.lineItems[this.id].product["desc"] + " , "
+				+ "Unit price: $" + orderObj.lineItems[this.id].product["price"] + " , " 
+				+ "Quantity: " + orderObj.lineItems[this.id].qty
+				+ " <input type=\"button\" class=\"del\" value=\"Delete\" onclick= \"displayOrder[this.id].changeQuantity(0)\" id = "+ this.id + ">"
+				+ "<br>" + "</p>")
+		};
 
 	this.changeQuantity = function(num){
-		//btn, para, called successfully, all 6 elements
-		console.log(btn);
-		console.log(para);
-		
-		//inside the click function, when click the delete button 1, the showing btn and para is the third one.
-		btn.addEventListener("click",function myFunction(){
-		 	console.log(btn);
-			console.log(para);
+		document.getElementById("item" + this.id).style.color = "grey";
+    	orderObj.lineItems[this.id].qty = num;
+    	fTotal();
 
-			para.style.color = "grey";
-    		orderObj.lineItems[i].qty = num;
-    	});
-	};
+    };
 
 	this.addQuantityToTotal = function(total){
-		total = total + 1.1 * (parseFloat(orderObj.lineItems[i].product["price"])) * (parseFloat(orderObj.lineItems[i].qty));
+		total = 1.1 * (parseFloat(orderObj.lineItems[this.id].product["price"])) * (parseFloat(orderObj.lineItems[this.id].qty));
 		return total;
 	};
-	
 };
 
 function fDisplayOrder(){
-	var total = 0;
-	for (i = 0; i < displayOrder.length; i++) {
-		displayOrder[i].orderStr();
-		
-		displayOrder[i].changeQuantity(0);
-
-		total = displayOrder[i].addQuantityToTotal(total);
+	for (var i = 0; i < displayOrder.length; i++) {
+		var currentLine = displayOrder[i];
+		currentLine.getHTML();
 	}
-	total = (total + 5).toFixed(2);
-	document.getElementById("orderTotal").innerHTML = "Total price: $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>"
+	fTotal();
+};
 
+function fTotal(){
+	var total = 0;
+	var arrQty = [];
+	for (var i = 0; i < displayOrder.length; i++) {
+		var currentLine = displayOrder[i];
+		total = total + currentLine.addQuantityToTotal(total);
+		arrQty.push(orderObj.lineItems[i].qty);
+		//console.log(arrQty);
+	};
+
+	if (arrQty.every(x => x == 0)) {
+		document.getElementById("orderTotal").innerHTML = "No items in the order. Total: $" + 0;
+	} 
+	else {
+		total = (total + 5).toFixed(2);
+		document.getElementById("orderTotal").innerHTML = "Total price: $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>"
+	};
 };
 
 function getCustomerInfo(){
@@ -112,13 +109,11 @@ function getCustomerInfo(){
 }
 
 </script>
-
 </head>
 
 <body>
 <h1>Your Order Summary</h1>
 <div id="item"></div>
-
 <h3 id="orderTotal" class="position"></h3>
 <br>
 <br>
@@ -136,7 +131,7 @@ function getCustomerInfo(){
 <br>
 <br>
 <button type="submit" onclick="deletedItems()">Submit</button>
-<footer>
+</footer>
 
 </body>
 </html>

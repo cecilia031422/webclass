@@ -6,13 +6,13 @@
 				},
 "lineItems" : [
 		{"qty": 1, 
-		"product": {"desc":"Black coffee", "price": 10}
+		"product": {"desc":"Black coffee", "price": 2.79}
 		},
 		{"qty": 3, 
-		"product": {"desc":"Green tea", "price": 10}
+		"product": {"desc":"Green tea", "price": 1.69}
 		},
 		{"qty": 5, 
-		"product": {"desc":"Apple juice", "price": 10}
+		"product": {"desc":"Apple juice", "price": 4.59}
 		}
 	]
 }
