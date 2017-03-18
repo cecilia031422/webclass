@@ -1,0 +1,8 @@
+/*set the font size for the whole html from google fonts-Ek Mukta*/
+@import url('https://fonts.googleapis.com/css?family=Ek+Mukta');
+* {
+	font-family: 'Ek Mukta', sans-serif !important;
+}
+
+
+
