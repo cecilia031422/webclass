@@ -41,7 +41,7 @@ var displayOrder = [
 function OrderInfo (itemID) {
 	this.id = itemID;
 	this.getHTML = function(){
-		$("item"+this.id).html(
+		$("#item"+this.id).html(
 			"<td id=desc" + this.id + ">"
 				+ orderObj.lineItems[this.id].product["desc"] 
 			+ "</td>"
@@ -104,18 +104,18 @@ function fTotal(){
 	};
 
 	if (arrQty.every(x => x == 0)) {
-		document.getElementById("orderTotal").innerHTML = "No items in the order.<br> Total: $" + 0;
+		$("#orderTotal").html("No items in the order.<br> Total: $" + 0);
 	} 
 	else {
 		total = (total + 5).toFixed(2);
-		document.getElementById("orderTotal").innerHTML = "Total price:<br> $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>"
+		$("$orderTotal").html = "Total price:<br> $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>"
 	};
 };
 
 function getCustomerInfo(){
-	document.getElementById("customerInfo").innerHTML 
-		= "Customer name: " + orderObj.customerInfo.name + "<br>"
+	$("#customerInfo").html 
+		( "Customer name: " + orderObj.customerInfo.name + "<br>"
 			+ "Email address: " + orderObj.customerInfo.email + "<br>" 
 			+ "Phone number: " + orderObj.customerInfo.phone + "<br>" 
-			+ "Address: " + orderObj.customerInfo.address;	
+			+ "Address: " + orderObj.customerInfo.address);	
 }
