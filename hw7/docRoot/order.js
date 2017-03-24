@@ -108,7 +108,7 @@ function fTotal(){
 	} 
 	else {
 		total = (total + 5).toFixed(2);
-		$("$orderTotal").html = "Total price:<br> $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>"
+		$("#orderTotal").html( "Total price:<br> $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>");
 	};
 };
 
