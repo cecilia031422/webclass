@@ -1,121 +1,115 @@
-window.onload = function() {
-	getMyOrder();
-};
+'use strict';
+//orderInf				classname for each lineitem div
+//displayOrder 			constructor to append all the child divs to the orderInf targetDiv
+						//invoke the functions to delete a lineitem and change qty to update total
+//getCustomerInf        function to display the shipping information
+//when the page loaded, use getJSON to get the object, and fir each orderInf classname, run displayOrder
 
-function get( url ) {
-	return new Promise(function (resolve,reject){
-		var req = new XMLHttpRequest();
-		req.open( "GET", url , true );
-		req.send();
+var orderObj = {};
+// var orderObj = {
+// "customerInfo" : {"name" : "Cecilia Zhang",
+// 						"email" : "hello@gmail.com",
+// 						"phone": 1234567,
+// 						"address": "1234 Hello St."
+// 				},
+// "lineItems" : [
+// 		{"qty": 1, 
+// 		"product": {"desc":"Black coffee", "price": 3.00}
+// 		},
+// 		{"qty": 3, 
+// 		"product": {"desc":"Green tea", "price": 3.50}
+// 		},
+// 		{"qty": 5, 
+// 		"product": {"desc":"Apple juice", "price": 4.00}
+// 		}
+// 	]
+// };
 
-		req.onload = function() {
-			resolve( req.response );
-		}
-		req.onerror = function () {
-			reject( Error("What went wrong") );
-		}	
-	});
-};
+$.getJSON("http://localhost/getOrder.json",function(jsonData){
+	console.log(jsonData);
+	orderObj = jsonData;
+	console.log(orderObj);
 
-function getMyOrder(){
-	get ("http://localhost/getOrder.json").then (
-		function(response){
-			orderObj = JSON.parse(response);
-			fDisplayOrder();
-			getCustomerInfo();
-		},
+	$(".orderInf").each( function(index, element) {
+		new displayOrder(index, 
+			$(element)
+			);
+	})
+	getCustomerInfo();
 
-		function(error){
-			console.log("Failed" + error.message);
-		}
-	);
-};
+})
 
-var displayOrder = [
-	new OrderInfo (0),
-	new OrderInfo (1),
-	new OrderInfo (2)
-];
+function displayOrder(index,targetDiv){
+	$(targetDiv).attr("id","item"+index);
 
+	var descDiv = $("<div />", 
+		{"text": orderObj.lineItems[index].product["desc"],
+		"class": "col-md-4 col-xs-6"
+		}).appendTo(targetDiv);
+	var priceDiv = $("<div />", 
+		{"text": "$"+orderObj.lineItems[index].product["price"]+"/unit",
+		"class": "col-md-3 col-xs-6"
+		}).appendTo(targetDiv);
+	
+	var qtyDiv = $("<select />",
+		{"class": "col-md-3 col-xs-6",
+		"id":"q"+index,
+		"change": function(){
+			orderObj.lineItems[index].qty = parseInt(this.value);
+			console.log(this.value);
+			fTotal();
+			}
+		}).appendTo(targetDiv);
 
-function OrderInfo (itemID) {
-	this.id = itemID;
-	this.getHTML = function(){
-		$("#item"+this.id).html(
-			"<td id=desc" + this.id + ">"
-				+ orderObj.lineItems[this.id].product["desc"] 
-			+ "</td>"
-
-			+ "<td id=price" + this.id + ">"
-				+ orderObj.lineItems[this.id].product["price"] 
-			+ "</td>" 
-
-			+ "<td>"
-				+"<form >"
-				+"<div class=\"form-group\">"
-  					+"<select class=\"form-control mb-2 mr-sm-2 mb-sm-0\" id=q"+ this.id + " onchange=\"displayOrder["+itemID+"].changeQuantity(this.value)\">"
-    					+"<option value=\"1\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option><option value=\"6\">6</option><option value=\"7\">7</option><option value=\"8\">8</option><option value=\"9\">9</option><option value=\"10\">10</option>"
-  					+"</select>"
-				+"</div>"
-				+"</form>"
-			+ "</td>"
-
-			+ "<td><input type=\"button\" class=\"btn btn-warning\" value=\"Delete\" onclick= \"displayOrder[this.id].deleteItem()\" id = "+ this.id + ">" 
-			+ "</td>"
-		)
-	};
-
-	this.deleteItem = function(){
-		document.getElementById("item" + this.id).style.color = "#E3E0E0";
-		document.getElementById("q"+this.id).disabled = true;
-    	orderObj.lineItems[this.id].qty = 0;
-    	fTotal();
-    };
-
-    this.changeQuantity = function(value){
-    	var replacedId = (this.id).toString().replace("q","");
-    	console.log(replacedId);
-    	orderObj.lineItems[replacedId].qty = value;
-    	fTotal();
-    };
-
-	this.addQuantityToTotal = function(total){
-		total = 1.1 * (parseFloat(orderObj.lineItems[this.id].product["price"])) * (parseFloat(orderObj.lineItems[this.id].qty));
-		return total;
-	};
-};
-
-function fDisplayOrder(){
-	for (var i = 0; i < displayOrder.length; i++) {
-		var currentLine = displayOrder[i];
-		currentLine.getHTML();
+	var optionsArray = [1,2,3,4,5,6,7,8,9,10];
+	for (var i = 0;i < optionsArray.length; i++) {
+		$('<option />').val(optionsArray[i]).text(optionsArray[i]).appendTo(qtyDiv)
 	}
+
+	var delDiv = $("<input />",
+		{"type": "button",
+		"class": "btn btn-warning btn-sm",
+		"value": "Delete",
+		"id": index,
+		"click": function (){
+					$("#item"+ index).fadeOut(1000);
+					orderObj.lineItems[index].qty = 0;
+					fTotal();
+				}
+		}).appendTo(targetDiv);
+
 	fTotal();
-};
+}
 
 function fTotal(){
 	var total = 0;
 	var arrQty = [];
-	for (var i = 0; i < displayOrder.length; i++) {
-		var currentLine = displayOrder[i];
-		total = total + currentLine.addQuantityToTotal(total);
-		arrQty.push(orderObj.lineItems[i].qty);
-		//console.log(arrQty);
-	};
+	$(".orderInf").each( function(index) {
+		total += 1.1 * parseFloat(orderObj.lineItems[index].product["price"]) * parseFloat(orderObj.lineItems[index].qty);
+		console.log(total);
 
-	if (arrQty.every(x => x == 0)) {
-		$("#orderTotal").html("No items in the order.<br> Total: $" + 0);
-	} 
+		arrQty.push(orderObj.lineItems[index].qty);
+		console.log(arrQty);
+	});
+
+
+	if (arrQty.every(x=>x == 0)) {
+		$("#orderTotal").html("No items in the order.<br><br>$" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>")
+	}
 	else {
-		total = (total + 5).toFixed(2);
-		$("#orderTotal").html( "Total price:<br> $" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>");
-	};
-};
+		total = (total+5).toFixed(2);
+		$("#orderTotal").html("Total price:<br><br>$" + total + "<br><sub>including 10% tax and $5 shipping fee</sub>")
+	}
+}
 
 function getCustomerInfo(){
-	$("#customerInfo").html 
-		( "Customer name: " + orderObj.customerInfo.name + "<br>"
-			+ "Email address: " + orderObj.customerInfo.email + "<br>" 
-			+ "Phone number: " + orderObj.customerInfo.phone + "<br>" 
-			+ "Address: " + orderObj.customerInfo.address);	
+	$("#customerInfo").html ( "Customer name: " + orderObj.customerInfo.name + "<br>"
+								+ "Email address: " + orderObj.customerInfo.email + "<br>" 
+								+ "Phone number: " + orderObj.customerInfo.phone + "<br>" 
+								+ "Address: " + orderObj.customerInfo.address);
 }
+
+
+
+
+

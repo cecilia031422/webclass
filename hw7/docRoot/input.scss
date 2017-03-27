@@ -1,3 +1,23 @@
-@mixin large-text {
-	font: 100pt;
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: $font-stack;
+  color: $primary-color;
+}
+
+.orderInf {
+	padding-bottom: 8%;
+	font-size: 110%;
+	select {
+		width:100px;
+		margin-right: 20px;
+	}
+}
+
+#sidebar {
+	background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
