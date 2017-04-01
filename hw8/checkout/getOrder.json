@@ -1,0 +1,18 @@
+{
+"customerInfo" : {"name" : "Cecilia Zhang",
+						"email" : "hello@gmail.com",
+						"phone": 1234567,
+						"address": "1234 Hello St."
+				},
+"lineItems" : [
+		{"qty": 1, 
+		"product": {"desc":"Bluebottle Black coffee", "price": 3.00}
+		},
+		{"qty": 1, 
+		"product": {"desc":"Liton Green tea", "price": 3.50}
+		},
+		{"qty": 1, 
+		"product": {"desc":"Earth's best Apple juice", "price": 4.00}
+		}
+	]
+}

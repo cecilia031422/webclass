@@ -25,7 +25,7 @@ var orderObj = {};
 // 	]
 // };
 
-$.getJSON("http://localhost/getOrder.json",function(jsonData){
+$.getJSON("http://www.ceciliazhang.us/getOrder.json",function(jsonData){
 	console.log(jsonData);
 	orderObj = jsonData;
 	console.log(orderObj);
@@ -44,15 +44,15 @@ function displayOrder(index,targetDiv){
 
 	var descDiv = $("<div />", 
 		{"text": orderObj.lineItems[index].product["desc"],
-		"class": "col-md-4 col-xs-6"
+		"class": "col-md-4 col-xs-4"
 		}).appendTo(targetDiv);
 	var priceDiv = $("<div />", 
 		{"text": "$"+orderObj.lineItems[index].product["price"]+"/unit",
-		"class": "col-md-3 col-xs-6"
+		"class": "col-md-3 col-xs-3"
 		}).appendTo(targetDiv);
 	
 	var qtyDiv = $("<select />",
-		{"class": "col-md-3 col-xs-6",
+		{"class": "col-md-3 col-xs-3",
 		"id":"q"+index,
 		"change": function(){
 			orderObj.lineItems[index].qty = parseInt(this.value);
@@ -69,6 +69,7 @@ function displayOrder(index,targetDiv){
 	var delDiv = $("<input />",
 		{"type": "button",
 		"class": "btn btn-warning btn-sm pull-right",
+		"css": {"margin":"5%"},
 		"value": "Delete",
 		"id": index,
 		"click": function (){

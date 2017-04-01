@@ -1,0 +1,18 @@
+body {
+  font: Helvetica, sans-serif;
+  color: #333; }
+
+.orderInf {
+  padding-bottom: 8%;
+  font-size: 110%; }
+  .orderInf select {
+    width: 100px;
+    margin-right: 20px; }
+
+#sidebar {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px; }
+
+/*# sourceMappingURL=output.css.map */
