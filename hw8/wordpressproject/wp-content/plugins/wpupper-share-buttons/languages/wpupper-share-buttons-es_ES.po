@@ -1,0 +1,1151 @@
+# Translation of Development (trunk) in Spanish (Spain)
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Development (trunk)\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpupper-share-"
+"buttons\n"
+"POT-Creation-Date: 2017-03-25 16:06:44+00:00\n"
+"PO-Revision-Date: 2017-03-25 10:29-0300\n"
+"Last-Translator: Victor Freitas <victorfreitasdev@gmail.com>\n"
+"Language-Team: Victor Freitas <victorfreitasdev@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: Config\n"
+"X-Poedit-SearchPath-1: Controller\n"
+"X-Poedit-SearchPath-2: Helper\n"
+"X-Poedit-SearchPath-3: Model\n"
+"X-Poedit-SearchPath-4: View\n"
+"X-Poedit-SearchPath-5: wpupper-share-buttons.php\n"
+"X-Poedit-SearchPath-6: Templates\n"
+
+#: Config/enqueue-scripts.php:110
+msgid "View Untitled"
+msgstr "Ver Sin título"
+
+#: Config/enqueue-scripts.php:111
+msgid "View without count"
+msgstr "Ver sin recuento"
+
+#: Config/enqueue-scripts.php:112
+msgid "See with title"
+msgstr "Ver con el título"
+
+#: Config/enqueue-scripts.php:113
+msgid "See with count"
+msgstr "Ver con el recuento"
+
+#: Config/enqueue-scripts.php:142
+msgid "Close"
+msgstr "Cierra"
+
+#: Config/enqueue-scripts.php:143
+msgid "Today"
+msgstr "Hoy"
+
+#: Config/enqueue-scripts.php:151
+msgid "Next"
+msgstr "Siguiente"
+
+#: Config/enqueue-scripts.php:152
+msgid "Previous"
+msgstr "Anterior"
+
+#: Config/social-elements.php:91 Controller/share-reports.controller.php:299
+#: Controller/widget-follow.controller.php:161
+msgid "Facebook"
+msgstr "Facebook"
+
+#: Config/social-elements.php:94
+msgid "Share on Facebook"
+msgstr "Compartir en Facebook"
+
+#: Config/social-elements.php:100 Config/social-elements.php:136
+#: Config/social-elements.php:154 Config/social-elements.php:172
+#: Config/social-elements.php:190 Config/social-elements.php:208
+#: Config/social-elements.php:280 Config/social-elements.php:298
+#: Config/social-elements.php:316 Config/social-elements.php:352
+#: Config/social-elements.php:388 Config/social-elements.php:406
+#: Config/social-elements.php:424
+msgid "Share"
+msgstr "Compartir"
+
+#: Config/social-elements.php:109 Controller/share-reports.controller.php:301
+#: Controller/widget-follow.controller.php:170
+msgid "Twitter"
+msgstr "Twitter"
+
+#: Config/social-elements.php:112 Config/social-elements.php:118
+msgid "Tweet"
+msgstr "Tweet"
+
+#: Config/social-elements.php:127 Controller/widget-follow.controller.php:188
+msgid "Google Plus"
+msgstr ""
+
+#: Config/social-elements.php:130
+msgid "Share on Google+"
+msgstr "Compartir en Google+"
+
+#: Config/social-elements.php:145
+msgid "WhatsApp"
+msgstr ""
+
+#: Config/social-elements.php:148
+msgid "Share on WhatsApp"
+msgstr "Compartir en WhatsApp"
+
+#: Config/social-elements.php:163 Controller/share-reports.controller.php:303
+#: Controller/widget-follow.controller.php:197
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: Config/social-elements.php:166
+msgid "Share on Pinterest"
+msgstr "Compartir en Pinterest"
+
+#: Config/social-elements.php:181 Controller/share-reports.controller.php:302
+#: Controller/widget-follow.controller.php:179
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: Config/social-elements.php:184
+msgid "Share on Linkedin"
+msgstr "Compartir en Linkedin"
+
+#: Config/social-elements.php:199 Controller/share-reports.controller.php:304
+#: Controller/widget-follow.controller.php:251
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: Config/social-elements.php:202
+msgid "Share on Tumblr"
+msgstr "Compartir en Tumblr"
+
+#: Config/social-elements.php:217
+msgid "Email"
+msgstr ""
+
+#: Config/social-elements.php:220
+msgid "Send by email"
+msgstr "Enviar por correo electrónico"
+
+#: Config/social-elements.php:235
+msgid "Gmail"
+msgstr ""
+
+#: Config/social-elements.php:238
+msgid "Send by Gmail"
+msgstr "Enviar por Gmail"
+
+#: Config/social-elements.php:253
+msgid "PrintFriendly"
+msgstr ""
+
+#: Config/social-elements.php:256
+msgid "Print via PrintFriendly"
+msgstr "imprimir por PrintFriendly"
+
+#: Config/social-elements.php:262
+msgid "Print"
+msgstr "Impresión"
+
+#: Config/social-elements.php:271
+msgid "Telegram"
+msgstr ""
+
+#: Config/social-elements.php:274
+msgid "Share on Telegram"
+msgstr "Compartir en Telegram"
+
+#: Config/social-elements.php:289
+msgid "Skype"
+msgstr ""
+
+#: Config/social-elements.php:292
+msgid "Share on Skype"
+msgstr "Compartir en Skype"
+
+#: Config/social-elements.php:307
+msgid "Viber"
+msgstr ""
+
+#: Config/social-elements.php:310
+msgid "Share on Viber"
+msgstr "Compartir en Viber"
+
+#: Config/social-elements.php:325 Config/social-elements.php:334
+msgid "Like"
+msgstr "Me gusta"
+
+#: Config/social-elements.php:328
+msgid "Like on Facebook"
+msgstr "Me gusta en Facebook"
+
+#: Config/social-elements.php:343 Controller/widget-follow.controller.php:215
+msgid "Reddit"
+msgstr ""
+
+#: Config/social-elements.php:346
+msgid "Share on Reddit"
+msgstr "Compartir en Reddit"
+
+#: Config/social-elements.php:361 Config/social-elements.php:370
+msgid "Messenger"
+msgstr "Messenger"
+
+#: Config/social-elements.php:364
+msgid "Send on Facebook Messenger"
+msgstr "Enviar via Facebook Messenger"
+
+#: Config/social-elements.php:379 Controller/share-reports.controller.php:305
+msgid "Buffer"
+msgstr "Buffer"
+
+#: Config/social-elements.php:382
+msgid "Share on Buffer"
+msgstr "Compartir en Buffer"
+
+#: Config/social-elements.php:397 Controller/widget-follow.controller.php:314
+msgid "VK"
+msgstr ""
+
+#: Config/social-elements.php:400
+msgid "Share on VK"
+msgstr "Compartir en VK"
+
+#: Config/social-elements.php:415
+msgid "Flipboard"
+msgstr ""
+
+#: Config/social-elements.php:418
+msgid "Share on Flipboard"
+msgstr "Compartir en Flipboard"
+
+#: Config/social-elements.php:433
+msgid "Modal Share"
+msgstr "Compartir"
+
+#: Config/social-elements.php:436 Templates/layouts-primary.php:170
+msgid "Open modal social networks"
+msgstr "modal abre las redes sociales"
+
+#: Config/social-elements.php:628
+msgid "Click to see also"
+msgstr "Haga clic ver también"
+
+#: Config/social-elements.php:632 View/settings-extra.view.php:82
+msgid "I just saw"
+msgstr "Acabo de ver"
+
+#: Controller/ajax-sharing-reports.controller.php:95
+msgid "Not valid request"
+msgstr "Solicitud no válida"
+
+#: Controller/ajax-sharing-reports.controller.php:101
+msgid "Not valid reference"
+msgstr "Referencia no válida"
+
+#: Controller/ajax-sharing-reports.controller.php:159
+msgid "Empty counts"
+msgstr "Recuentos vacíos"
+
+#: Controller/ajax.controller.php:117
+msgid "Error: Could not process css file."
+msgstr "Error: No se pudo procesar el archivo css."
+
+#: Controller/settings.controller.php:53 View/settings.view.php:49
+msgid "Settings"
+msgstr "Ajustes"
+
+#. Plugin Name of the plugin/theme
+msgid "WPUpper Share Buttons"
+msgstr ""
+
+#: Controller/settings.controller.php:73
+msgid "WPUpper Share"
+msgstr "WPUpper Share"
+
+#: Controller/settings.controller.php:80 View/settings-extra.view.php:47
+#: View/utils.view.php:495
+msgid "Extra Settings"
+msgstr "Configuraciones adicionales"
+
+#: Controller/settings.controller.php:90 View/settings-custom-css.view.php:37
+#: View/utils.view.php:500
+msgid "Custom CSS"
+msgstr "CSS personalizado"
+
+#: Controller/settings.controller.php:100 View/settings-faq.view.php:35
+#: View/utils.view.php:505
+msgid "Use options"
+msgstr "Utilice las opciones"
+
+#: Controller/share-reports.controller.php:117
+msgid "Sharing Report | WPUpper Share Buttons"
+msgstr "Informe compartir | Botones de Acciones Sociales"
+
+#: Controller/share-reports.controller.php:118 View/utils.view.php:513
+msgid "Sharing Report"
+msgstr "Informe compartir"
+
+#: Controller/share-reports.controller.php:298 View/settings.view.php:475
+msgid "Title"
+msgstr "Título"
+
+#: Controller/share-reports.controller.php:300
+msgid "Google+"
+msgstr "Google+"
+
+#: Controller/share-reports.controller.php:306
+msgid "Total"
+msgstr "Total"
+
+#: Controller/share-reports.controller.php:307
+msgid "Post date"
+msgstr "Fecha del post"
+
+#: Controller/share-reports.controller.php:367
+msgid "Filter"
+msgstr "Filtrar"
+
+#: Controller/share-reports.controller.php:548
+msgid "There is no record available at the moment!"
+msgstr "No hay registro disponible en este momento!"
+
+#: Controller/share-reports.controller.php:610
+msgid "Y/m/d"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:23
+msgid "Insert the Follow Us of your social networks."
+msgstr "Inserte el Follow Us de sus redes sociales."
+
+#: Controller/widget-follow.controller.php:41
+msgid "CSS is disabled!"
+msgstr "CSS está deshabilitado!"
+
+#: Controller/widget-follow.controller.php:65
+#: Controller/widgets.controller.php:86
+msgid "Widget title"
+msgstr "Título del widget"
+
+#: Controller/widget-follow.controller.php:70 View/settings.view.php:469
+msgid "Custom class"
+msgstr "Clase personalizada"
+
+#: Controller/widget-follow.controller.php:75
+#: Controller/widgets.controller.php:101 View/settings.view.php:373
+msgid "Icons size"
+msgstr "Tamaño de los iconos"
+
+#: Controller/widget-follow.controller.php:81
+#: Controller/widgets.controller.php:107 View/settings.view.php:421
+msgid "Icons color"
+msgstr "Color de los iconos"
+
+#: Controller/widget-follow.controller.php:87
+#: Controller/widgets.controller.php:137
+msgid "Layout"
+msgstr "Layout"
+
+#: Controller/widget-follow.controller.php:163
+msgid "Follow us on Facebook"
+msgstr "Síguenos en Facebook"
+
+#: Controller/widget-follow.controller.php:172
+msgid "Follow us on Twitter"
+msgstr "Síganos en Twitter"
+
+#: Controller/widget-follow.controller.php:181
+msgid "Find us on Linkedin"
+msgstr "Encuentranos en Linkedin"
+
+#: Controller/widget-follow.controller.php:190
+msgid "Follow us on Google+"
+msgstr "Síguenos en Google+"
+
+#: Controller/widget-follow.controller.php:199
+msgid "My Pinterest board"
+msgstr "Mi tablero de Pinterest"
+
+#: Controller/widget-follow.controller.php:206
+msgid "Instagram"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:208
+msgid "Check out our Instagram"
+msgstr "Echa un vistazo a nuestro Instagram"
+
+#: Controller/widget-follow.controller.php:217
+msgid "Follow us Reddit"
+msgstr "Siguenos Reddit"
+
+#: Controller/widget-follow.controller.php:224
+msgid "YouTube"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:226
+msgid "Subscribe to our YouTube"
+msgstr "Suscríbete a nuestro YouTube"
+
+#: Controller/widget-follow.controller.php:233
+msgid "Vimeo"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:235
+msgid "Find us on Vimeo"
+msgstr "Encuentranos en Vimeo"
+
+#: Controller/widget-follow.controller.php:242
+msgid "RSS Feed"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:244
+msgid "Subscribe to our RSS Feed"
+msgstr "Suscríbete a nuestro RSS Feed"
+
+#: Controller/widget-follow.controller.php:253
+msgid "Find us on Tumblr"
+msgstr "Encuentranos en Tumblr"
+
+#: Controller/widget-follow.controller.php:260
+msgid "Flickr"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:262
+msgid "Check out our Flickr"
+msgstr "Echa un vistazo a nuestro Flickr"
+
+#: Controller/widget-follow.controller.php:269
+msgid "Foursquare"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:271
+msgid "Check out our Foursquare"
+msgstr "Echa un vistazo a nuestro Foursquare"
+
+#: Controller/widget-follow.controller.php:278
+msgid "GitHub"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:280
+msgid "Check out our GitHub"
+msgstr "Echa un vistazo a nuestro GitHub"
+
+#: Controller/widget-follow.controller.php:287
+msgid "E-mail"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:289
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: Controller/widget-follow.controller.php:296
+msgid "Snapchat"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:298
+msgid "Follow us on Snapchat"
+msgstr "Siguenos en Snapchat"
+
+#: Controller/widget-follow.controller.php:305
+msgid "Behance"
+msgstr ""
+
+#: Controller/widget-follow.controller.php:307
+msgid "Follow us on Behance"
+msgstr "Síganos en Behance"
+
+#: Controller/widget-follow.controller.php:316
+msgid "Follow us on VKontakte"
+msgstr "Síguenos en VKontakte"
+
+#: Controller/widgets.controller.php:17
+msgid "Insert share buttons of social networks."
+msgstr "Insertar botones compartidos de redes sociales."
+
+#: Controller/widgets.controller.php:91
+msgid "Post title"
+msgstr "Título de la entrada"
+
+#: Controller/widgets.controller.php:96
+msgid "URL"
+msgstr "URL"
+
+#: Controller/widgets.controller.php:113
+msgid "Buttons background color. <br>Layouts: Square plus and Button"
+msgstr "Botones color de fondo. <br>Diseños: Square plus y Button"
+
+#: Controller/widgets.controller.php:119 View/settings.view.php:459
+msgid "Buttons title color"
+msgstr "Botones de color del título"
+
+#: Controller/widgets.controller.php:125 View/settings.view.php:411
+msgid "Share count text color"
+msgstr "Color del texto del cupo de acciones"
+
+#: Controller/widgets.controller.php:131
+msgid ""
+"Share count background color. <br>Layouts: Default, Button, Rounded and "
+"Square."
+msgstr ""
+"Compartir el fondo de color de fondo. <br>Layouts: predeterminado, botón, "
+"redondeado y cuadrado."
+
+#: Controller/widgets.controller.php:143 View/settings.view.php:513
+msgid "Remove counter"
+msgstr "Retire counter"
+
+#: Controller/widgets.controller.php:148 View/settings.view.php:506
+msgid "Remove button title"
+msgstr "Retire título botón"
+
+#: Helper/utils-share.php:404 Helper/utils.php:2129 View/settings.view.php:179
+#: View/settings.view.php:402
+msgid "Default"
+msgstr "Defecto"
+
+#: Helper/utils-share.php:405 View/settings.view.php:191
+#: View/settings.view.php:403 View/settings.view.php:451
+msgid "Button"
+msgstr "Botón"
+
+#: Helper/utils-share.php:406 View/settings.view.php:203
+#: View/settings.view.php:324 View/settings.view.php:349
+#: View/settings.view.php:404
+msgid "Rounded"
+msgstr "Redondeado"
+
+#: Helper/utils-share.php:407 View/settings.view.php:215
+#: View/settings.view.php:298 View/settings.view.php:311
+#: View/settings.view.php:405
+msgid "Square"
+msgstr "Cuadrado"
+
+#: Helper/utils-share.php:408 View/settings.view.php:227
+#: View/settings.view.php:361 View/settings.view.php:366
+#: View/settings.view.php:452
+msgid "Square plus"
+msgstr "Cuadrado más"
+
+#: Helper/utils.php:1497
+msgid "SHARES"
+msgstr "ACCIONES"
+
+#: Templates/fixed-left.php:150
+msgid "Shares"
+msgstr "Acciones"
+
+#: View/settings-custom-css.view.php:32 View/settings-extra.view.php:41
+#: View/settings-faq.view.php:29 View/settings.view.php:45
+#: View/share-report.view.php:33
+msgid "Add the Share Buttons automatically."
+msgstr "Añadir los botones para compartir de forma automática."
+
+#: View/settings-custom-css.view.php:56
+msgid "Enter your custom CSS ..."
+msgstr "Introduzca su CSS personalizado ..."
+
+#: View/settings-custom-css.view.php:70 View/settings.view.php:557
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: View/settings-extra.view.php:63 View/settings-extra.view.php:65
+msgid "Twitter username"
+msgstr "Nombre de usuario de Twitter"
+
+#: View/settings-extra.view.php:64
+msgid "Your twitter username"
+msgstr "Su nombre de usuario de Twitter"
+
+#: View/settings-extra.view.php:70 View/settings-extra.view.php:71
+msgid "Twitter hashtags"
+msgstr "Twitter hashtags"
+
+#: View/settings-extra.view.php:72
+msgid ""
+"Optional Hashtags appended onto the tweet (comma separated. don't include \"#"
+"\")"
+msgstr ""
+"Hashtags opcionales añadidos en el tweet (separados por comas, no incluyen "
+"\"#\")"
+
+#: View/settings-extra.view.php:74 View/settings-extra.view.php:83
+#: View/settings-extra.view.php:92
+msgid "Example: "
+msgstr "Ejemplo: "
+
+#: View/settings-extra.view.php:79 View/settings-extra.view.php:80
+msgid "Twitter text"
+msgstr "Twitter texto"
+
+#: View/settings-extra.view.php:81
+msgid "Use {title} to add the post title"
+msgstr "Usar {title} para añadir el título de la entrada"
+
+#: View/settings-extra.view.php:88
+msgid "UTM tracking"
+msgstr "Seguimiento de UTM"
+
+#: View/settings-extra.view.php:89
+msgid "Add UTM tracking (Analytics)"
+msgstr "Añadir seguimiento UTM (Analytics)"
+
+#: View/settings-extra.view.php:90
+msgid "Use <code>?</code> and"
+msgstr "Uso <code>?</code> y"
+
+#: View/settings-extra.view.php:90
+msgid "adding parameters to use <code>&</code> in the tracking."
+msgstr "añadir parámetros a utilizar <code>&</ code> en el seguimiento."
+
+#: View/settings-extra.view.php:97
+msgid "Bitly access token"
+msgstr "Token de acceso Bitly"
+
+#: View/settings-extra.view.php:98
+msgid "Insert your access token Bitly"
+msgstr "Inserte su token de acceso Bitly"
+
+#: View/settings-extra.view.php:99
+msgid "Shorten urls using bitly, generate token in "
+msgstr "Encurtar urls usando bitly, gerar chave em "
+
+#: View/settings-extra.view.php:109
+msgid "Select Bitly domain"
+msgstr "Seleccionar Bitly domain"
+
+#: View/settings-extra.view.php:120
+msgid "Post types is enabled"
+msgstr "Tipo de contenido habilitado."
+
+#: View/settings-extra.view.php:125
+msgid "Minimum 1 post type, default all."
+msgstr "Mínimo 1 tipo de publicación, predeterminado todo."
+
+#: View/settings-extra.view.php:131
+msgid "Minify html buttons share"
+msgstr "Minify html botones de compartir"
+
+#: View/settings-extra.view.php:133
+msgid "Minify the HTML helps site performance."
+msgstr "Minificar el HTML ayuda al rendimiento del sitio."
+
+#: View/settings-extra.view.php:139
+msgid "Deactivate sharing report"
+msgstr "Desactivar informe de uso compartido"
+
+#: View/settings-extra.view.php:141
+msgid ""
+"This allows you to disable counting of the shares report. You will not lose "
+"the report you have already computed."
+msgstr ""
+"Esto le permite desactivar la cuenta del informe de recursos compartidos. No "
+"perderá el informe que ya ha calculado."
+
+#: View/settings-extra.view.php:147
+msgid "Disable CSS"
+msgstr "CSS Desactivar"
+
+#: View/settings-extra.view.php:154
+msgid "Disable JS"
+msgstr "Inhabilitar JS"
+
+#: View/settings-extra.view.php:161
+msgid "CSS file in footer"
+msgstr "Archivo CSS en el pie de página"
+
+#: View/settings-extra.view.php:163
+msgid ""
+"Keep the CSS style in the footer is recommended to improve the performance "
+"of your website."
+msgstr ""
+"Mantener el estilo CSS en el pie de página se recomienda para mejorar el "
+"rendimiento de su sitio web."
+
+#: View/settings-faq.view.php:108
+msgid "Available filters"
+msgstr "Los filtros disponibles"
+
+#: View/settings.view.php:66
+msgid "Places available"
+msgstr "Lugares disponibles"
+
+#: View/settings.view.php:75
+msgid "Page home"
+msgstr "Página de inicio"
+
+#: View/settings.view.php:84
+msgid "Archive/Category"
+msgstr "Archivo/Categoría"
+
+#: View/settings.view.php:93
+msgid "Pages"
+msgstr "Páginas"
+
+#: View/settings.view.php:102
+msgid "Single"
+msgstr "Single"
+
+#: View/settings.view.php:113
+msgid "WooCommerce share"
+msgstr "WooCommerce share"
+
+#: View/settings.view.php:124
+msgid "Before content"
+msgstr "Antes de contenido"
+
+#: View/settings.view.php:133
+msgid "After content"
+msgstr "Después de contenido"
+
+#: View/settings.view.php:140
+msgid "Social networks available"
+msgstr "Las redes sociales disponibles"
+
+#: View/settings.view.php:166
+msgid "Layout options"
+msgstr "Opciones de diseño"
+
+#: View/settings.view.php:168
+msgid "All layout supports responsive"
+msgstr "Todo el diseño es compatible con sensible"
+
+#: View/settings.view.php:236 View/settings.view.php:453
+msgid "Position fixed"
+msgstr "Posición fija"
+
+#: View/settings.view.php:246
+msgid "Fixed left"
+msgstr "Fijo izquierda"
+
+#: View/settings.view.php:259
+msgid "Fixed right"
+msgstr "Derecho fijo"
+
+#: View/settings.view.php:269
+msgid "Clear"
+msgstr "Claro"
+
+#: View/settings.view.php:270
+msgid "Click to clear the positions."
+msgstr "Haga clic para desactivar las posiciones."
+
+#: View/settings.view.php:285 View/settings.view.php:348
+msgid "Position fixed layout"
+msgstr "Posición fija diseño"
+
+#: View/settings.view.php:341
+msgid "Text below sharing count"
+msgstr "Texto debajo del recuento compartido"
+
+#: View/settings.view.php:345 View/settings.view.php:365
+msgid "Change text below sharing count. Default SHARES"
+msgstr "Cambiar texto por debajo del recuento compartido. Defecto SHARES"
+
+#: View/settings.view.php:347
+msgid "Used in %s %s."
+msgstr "Utilizada en %s %s."
+
+#: View/settings.view.php:361
+msgid "%s: Text below sharing count"
+msgstr "%s: Texto debajo del recuento compartido"
+
+#: View/settings.view.php:366
+msgid "Used in %s layout."
+msgstr "Se utiliza en el diseño %s."
+
+#: View/settings.view.php:392
+msgid "Share count background color"
+msgstr "Conteo de cuota de color de fondo"
+
+#: View/settings.view.php:401
+msgid "Layouts: %s, %s, %s and %s."
+msgstr "Layouts: %s, %s, %s y %s."
+
+#: View/settings.view.php:441
+msgid "Buttons background color"
+msgstr "Color de fondo de los botones"
+
+#: View/settings.view.php:450
+msgid "Layouts: %s, %s, and %s."
+msgstr "Layouts: %s, %s, y %s."
+
+#: View/settings.view.php:470
+msgid "Custom class for primary div"
+msgstr "Clase personalizada para div primaria"
+
+#: View/settings.view.php:476
+msgid "Insert the title here."
+msgstr "Inserte el título aquí."
+
+#: View/settings.view.php:477
+msgid "Text to display above the sharing buttons."
+msgstr "Texto para mostrar encima de los botones de uso compartido."
+
+#: View/settings.view.php:482
+msgid "HTML id attribute"
+msgstr "HTML id atributo"
+
+#: View/settings.view.php:483
+msgid "Enter name to context of search. ID of content tag"
+msgstr ""
+"Introduce el nombre de contexto de búsqueda. ID de etiqueta de contenido"
+
+#: View/settings.view.php:484
+msgid ""
+"This is to set the fixed layout to the left of the post content. "
+"<strong>Example:</strong> <code>wrap</code> use {id} for post id."
+msgstr ""
+"Esto es para establecer el diseño fijo a la izquierda del contenido de post. "
+"<strong>Ejemplo:</strong> <code>wrap</code> utilizar {id} para la "
+"Identificación de la publicación."
+
+#: View/settings.view.php:490
+msgid "Fixed Items in top"
+msgstr "Buttons fijos en la parte superior"
+
+#: View/settings.view.php:492
+msgid "It is activated when scrolling the page on the buttons position."
+msgstr ""
+"Se activa cuando se desplaza a la página en la posición de los botones."
+
+#: View/settings.view.php:498
+msgid "Highlighted by reference"
+msgstr "Resaltada por referencia"
+
+#: View/settings.view.php:500
+msgid "This allows highlight the social network where the user Came from."
+msgstr "Esto permite resaltar la red social donde vino el usuario."
+
+#: View/settings.view.php:520
+msgid "Pinterest alt text"
+msgstr "Pinterest texto alternativo"
+
+#: View/settings.view.php:522
+msgid ""
+"Use in description of Pinterest the alt text of highlighted image in place "
+"of title of post."
+msgstr ""
+"Utilice en la descripción de Pinterest el texto alternativo de la imagen "
+"destacada en lugar del título de la publicación."
+
+#: View/settings.view.php:528
+msgid "Min count to display"
+msgstr "conteo mínimo para la visualización"
+
+#: View/settings.view.php:531
+msgid ""
+"When you enter the value, share counts are only displayed when the total "
+"counts of each item than equal to or greater than the informed value."
+msgstr ""
+"Cuando ingresa el valor, los conteos de acciones sólo se muestran cuando el "
+"total de cuentas de cada elemento es igual o mayor que el valor informado."
+
+#: View/settings.view.php:538
+msgid "Twitter share count"
+msgstr "Cuota de Twitter"
+
+#: View/settings.view.php:542
+msgid ""
+"The share count Twitter is powered by <a href=\"http://newsharecounts.com\" "
+"target=\"_blank\">newsharecounts.com</a>, you have to sign up with your "
+"Twitter account to get free service and twitter count. Just visit the "
+"website, fill in the domain of your site and click Sign in with Twitter. "
+"That, and nothing else!"
+msgstr ""
+"El número de acciones de Twitter es alimentado por <a href=\"http://"
+"newsharecounts.com\" target=\"_blank\">newsharecounts.com</a>, usted tiene "
+"que registrarse con su cuenta de Twitter para obtener servicio gratuito y el "
+"recuento de twitter. Sólo hay que visitar la página web, rellenar el dominio "
+"de su sitio y haga clic en Iniciar sesión con Twitter. Eso, y nada más!"
+
+#: View/share-report.view.php:51
+msgid "Search"
+msgstr "Buscar"
+
+#: View/share-report.view.php:97
+msgid "Start date:"
+msgstr "Data de início:"
+
+#: View/share-report.view.php:109
+msgid "End date:"
+msgstr "Data de término"
+
+#: View/share-report.view.php:134
+msgid "Export CSV"
+msgstr "Exportar CSV"
+
+#: View/shares.view.php:33
+msgid "Disable on this post"
+msgstr "Desactivar en esta publicación"
+
+#: View/utils.view.php:312 View/widgets.view.php:283
+msgid "YES"
+msgstr "SÍ"
+
+#: View/utils.view.php:313 View/widgets.view.php:284
+msgid "NO"
+msgstr "NO"
+
+#: View/utils.view.php:444
+msgid ""
+"Help keep the free %s, you can make a donation or vote with %s at WordPress."
+"org. Thank you very much!"
+msgstr ""
+"Ayudar a mantener el %s libre, puede hacer una donación o votar con %s en "
+"WordPress.org. ¡Muchas gracias!"
+
+#: View/utils.view.php:456
+msgid "Make a donation"
+msgstr "Hacer una donación"
+
+#: View/utils.view.php:463
+msgid "Make a review"
+msgstr "Hacer una revisión"
+
+#: View/utils.view.php:473
+msgid "Settings saved."
+msgstr "Ajustes guardados."
+
+#: View/utils.view.php:490
+msgid "General"
+msgstr "General"
+
+#: View/widget-follow.view.php:19
+msgid "No social networks were enabled in the Widget."
+msgstr "No se habilitaron redes sociales en el Widget."
+
+#: View/widgets.view.php:34
+msgid "Override post title"
+msgstr "Sustituye el título de la entrada"
+
+#: View/widgets.view.php:35
+msgid "Override permalinks"
+msgstr "Sustituye el permalinks"
+
+#: View/widgets.view.php:36
+msgid "Class name for CSS customization"
+msgstr "Nombre de clase para la personalización de CSS"
+
+#: View/widgets.view.php:141 View/widgets.view.php:166
+msgid "Drag & Drop to order and click to select"
+msgstr "Arrastrar y soltar para ordenar y hacer clic para seleccionar"
+
+#: View/widgets.view.php:169
+msgid "The [item] URL field is empty."
+msgstr "El campo URL [item] está vacío."
+
+#: View/widgets.view.php:210
+msgid "Enter the network URL here:"
+msgstr "Ingrese la URL de la red aquí:"
+
+#: View/widgets.view.php:224
+msgid "Example:"
+msgstr "Ejemplo:"
+
+#: View/widgets.view.php:240
+msgid "Your email:"
+msgstr "Tu correo electrónico:"
+
+#: View/widgets.view.php:249
+msgid "Subject:"
+msgstr "Asunto del email:"
+
+#: View/widgets.view.php:260
+msgid "Give the title:"
+msgstr "Dé el título:"
+
+#: wpupper-share-buttons.php:130
+msgid ""
+"It does not support your PHP version. Please, install a version greater than "
+"or equal to 5.2.0."
+msgstr ""
+"No es compatible con la versión de PHP. Instale una versión mayor o igual a "
+"5.2.0."
+
+#. Plugin URI of the plugin/theme
+#, fuzzy
+msgid "https://github.com/victorfreitas/wpupper-share-buttons"
+msgstr "https://github.com/victorfreitas"
+
+#. Description of the plugin/theme
+msgid ""
+"Insert share buttons of social networks. The buttons are inserted "
+"automatically or can be called via shortcode or php method."
+msgstr ""
+"Insertar botones de acción de las redes sociales. Los botones se insertan de "
+"forma automática o se puede llamar a través de código corto y el método php."
+
+#. Author of the plugin/theme
+msgid "Victor Freitas"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/victorfreitas"
+msgstr "https://github.com/victorfreitas"
+
+#: View/share-report.view.php:91
+msgctxt "placeholder"
+msgid "YYYY-MM-DD"
+msgstr ""
+
+#~ msgid "Cache time"
+#~ msgstr "Tiempo de cache"
+
+#~ msgid ""
+#~ "Set the time in minutes that will be cached in the Sharing report page"
+#~ msgstr ""
+#~ "Ajuste el tiempo en minutos que se almacenan en caché en la página del "
+#~ "informe Compartiendo"
+
+#~ msgid "This report has a cache of "
+#~ msgstr "Este informe tiene un caché de"
+
+#~ msgid "minutes"
+#~ msgstr "minutos"
+
+#~ msgid "%d minute"
+#~ msgstr "%d minutos"
+
+#~ msgid "Minute"
+#~ msgstr "Minuto"
+
+#~ msgid "Pinterest description"
+#~ msgstr "Descripción de Pinterest"
+
+#~ msgid "Custom post title"
+#~ msgstr "Título de la publicación personalizada"
+
+#~ msgid "Custom url"
+#~ msgstr "URL personalizada"
+
+#~ msgid "Custom icons size"
+#~ msgstr "Tamaño de iconos personalizados"
+
+#~ msgid "Custom icons color"
+#~ msgstr "Color de iconos personalizados"
+
+#~ msgid "Custom buttons background color"
+#~ msgstr "Color de fondo de iconos personalizados"
+
+#~ msgid "By layouts: %s, %s, and %s."
+#~ msgstr "Por diseños: %s, %s, y %s."
+
+#~ msgid "Share count label"
+#~ msgstr "Etiqueta del recuento de cuotas"
+
+#~ msgid "Change text of the share count title. Default SHARES"
+#~ msgstr ""
+#~ "Cambiar el texto del título del recuento de acciones. Predeterminado "
+#~ "ACCIONES"
+
+#~ msgid "Custom icons background color"
+#~ msgstr "Color de fondo de iconos personalizados"
+
+#~ msgid "Context ID"
+#~ msgstr "ID de contexto"
+
+#~ msgid "Error: Could not create css file."
+#~ msgstr "Error: No se pudo crear el archivo css."
+
+#~ msgid "Extra Settings | WPUpper Share Buttons"
+#~ msgstr "Configuraciones adicionales | Botones de Acciones Sociales"
+
+#~ msgid "Use options | WPUpper Share Buttons"
+#~ msgstr "Utilice las opciones | Botones de Acciones Sociales"
+
+#~ msgid "More"
+#~ msgstr "Más"
+
+#~ msgid ""
+#~ "Could not complete installation of <strong>WPUpper Share Buttons</strong> "
+#~ "because your PHP version is less than 5.3.0, please upgrade your PHP "
+#~ "version to use the plugin."
+#~ msgstr ""
+#~ "No se pudo completar la instalación de <strong>WPUpper Share Buttons</"
+#~ "strong> porque tu versión de PHP es menor que 5.3.0, por favor actualiza "
+#~ "tu versión de PHP para usar el plugin."
+
+#~ msgid "Donate"
+#~ msgstr "Hacer una donación"
+
+#~ msgid "Donate - USD"
+#~ msgstr "Donar - USD"
+
+#~ msgid "Donate - BRL"
+#~ msgstr "Donar - BRL"
+
+#~ msgid ""
+#~ "<strong>Warning! WPUpper Share Buttons:</strong> Is important clean the "
+#~ "caches of CSS and JavaScript files. This is necessary for the plugin to "
+#~ "work properly to get the number of social networking actions."
+#~ msgstr ""
+#~ "<strong>Aviso! WPUpper Share Buttons: </strong> Es importante limpiar los "
+#~ "depósitos de archivos CSS y JavaScript. Esto es necesario para que el "
+#~ "plugin funciona correctamente para obtener el número de acciones de redes "
+#~ "sociales."
+
+#~ msgid ""
+#~ "<strong>Warning! WPUpper Share Buttons:</strong> After the update is "
+#~ "important clean the caches of CSS and JavaScript files. This is necessary "
+#~ "for the plugin to work properly to get the number of social networking "
+#~ "actions."
+#~ msgstr ""
+#~ "<strong>Aviso! WPUpper Share Buttons: </strong> Es importante limpiar los "
+#~ "depósitos de archivos CSS y JavaScript. Esto es necesario para que el "
+#~ "plugin funciona correctamente para obtener el número de acciones de redes "
+#~ "sociales."
+
+#~ msgid ""
+#~ "<strong>Warning, WPUpper Share Buttons:</strong> After the update is "
+#~ "important clean the caches of CSS and JavaScript files. This is necessary "
+#~ "for the plugin to work properly to get the number of social networking "
+#~ "actions."
+#~ msgstr ""
+#~ "<strong>Aviso, WPUpper Share Buttons: </strong> Después de la "
+#~ "actualización es importante limpiar los depósitos de archivos CSS y "
+#~ "JavaScript. Esto es necesario para que el plugin funciona correctamente "
+#~ "para obtener el número de acciones de redes sociales."
+
+#~ msgid ""
+#~ "<strong>Notice WPUpper Share Buttons:</strong> After the update is "
+#~ "important clean the caches of CSS and JavaScript files. This is necessary "
+#~ "for the plugin to work properly to get the number of social networking "
+#~ "actions."
+#~ msgstr ""
+#~ "<strong>Notice WPUpper Share Buttons: </strong> Después de la "
+#~ "actualización es importante limpiar los depósitos de archivos CSS y "
+#~ "JavaScript. Esto es necesario para que el plugin funciona correctamente "
+#~ "para obtener el número de acciones de redes sociales."
+
+#~ msgid "Fixed top"
+#~ msgstr "Fija en la parte superior"
+
+#~ msgid "Enable highlighted by reference?"
+#~ msgstr "Activar resaltado por referencia?"
+
+#~ msgid "Referrer"
+#~ msgstr "referencia"
+
+#~ msgid "Fixed"
+#~ msgstr "Fijo"
+
+#~ msgid "Notice: "
+#~ msgstr "Atención: "
+
+#~ msgid "Do not use with fixed left checked."
+#~ msgstr "No utilice con posición izquierda fija."
+
+#~ msgid "Activate"
+#~ msgstr "Activar"
+
+#~ msgid "WPUpper"
+#~ msgstr "WPUpper"
